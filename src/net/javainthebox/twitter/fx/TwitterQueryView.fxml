@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.javainthebox.twitter.fx.TwitterQueryViewController">
+    <stylesheets>
+        <URL value="@twitterquery.css" />
+    </stylesheets>
+   <top>
+      <AnchorPane maxHeight="75.0" minHeight="75.0" prefHeight="75.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="field" layoutX="186.0" layoutY="13.0" onAction="#searchActionPerformed" promptText="Twitterを検索" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="24.0" />
+            <ImageView fx:id="searchImage" fitHeight="24.0" fitWidth="24.0" layoutX="541.0" layoutY="13.0" onMousePressed="#searchImagePressed" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="25.0">
+               <image>
+                  <Image url="@search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" layoutX="157.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="4.0">
+              <columns>
+                <TableColumn fx:id="dateColumn" editable="false" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="userColumn" editable="false" prefWidth="75.0" text="User" />
+                  <TableColumn fx:id="textColumn" editable="false" prefWidth="75.0" text="Text" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
