@@ -1,3 +1,8 @@
 .mainFxmlClass {
 
 }
+
+.text-field {
+    -fx-background-radius: 12px;
+    -fx-padding: 0px 12px 0px 12px;
+}
